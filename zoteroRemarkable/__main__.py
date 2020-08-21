@@ -2,7 +2,6 @@ from pyzotero import zotero as pyzotero
 import os
 import subprocess
 from yaml import safe_load
-import logging
 
 LIBRARY_TYPE = 'user'
 
@@ -61,7 +60,6 @@ def uploadPapers(papers):
     for paper in papers:
         path = paper.get('path')
         COMMAND = f"{RMAPI} put \"{path}\" /{FOLDER_NAME}"
-        logging.debug(COMMAND)
         subprocess.call(COMMAND, shell=True)
 
 
@@ -77,7 +75,6 @@ def getDeleteListOfPapers(remarkable_files, papers):
 def deletePapers(delete_list):
     for paper in delete_list:
         COMMAND = f"{RMAPI} rm /{FOLDER_NAME}/\"{paper}\""
-        logging.debug(COMMAND)
         subprocess.call(COMMAND, shell=True)
 
 
