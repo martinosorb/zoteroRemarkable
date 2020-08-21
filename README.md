@@ -5,12 +5,14 @@ This is a little utility that made by [Oscar Morrison](https://github.com/oscarm
 ## Setup
  - Install [rmapi](https://github.com/juruen/rmapi), the Go tool that interfaces with reMarkable
  - Install this repo with `pip3 install git+https://github.com/martinosorb/zoteroRemarkable.git`
- - Create a `config.ini` file modelled on the example in the `zoteroRemarkable` folder.
+ - Create a `config.ini` file modelled on the example in the `zoteroRemarkable` folder (or see below).
 
 ### Config file
 - Get your Zotero library_id and an API key from [Zotero web](https://www.zotero.org/settings/keys).
 - Create a folder on reMarkable and a collection in Zotero, which will be synced to each other.
 - Get base path for Zotero PDFs (the storage folder on your local machine, for me this is /Users/johndoe/Documents/Zotero/storage).
+- Find the path of your `rmapi` installation.
+- Add this information to the `config.ini` file (don't forget to remove `_EXAMPLE` from the name).
 
 ### Usage
 Ensure you have a config file, with zotero api key, and rmapi setup as described above. Then to sync, at any time from any terminal, just run: `python3 -m zoteroRemarkable`.
