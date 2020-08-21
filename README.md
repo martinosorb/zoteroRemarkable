@@ -9,7 +9,8 @@ This is a little utility that made by [Oscar Morrison](https://github.com/oscarm
  - *After* you've created the `config.ini` file, install with pip:
  ```bash
  cd zoteroRemarkable
- pip install .```
+ pip install .
+ ```
 
 ### Config file
 - Get your Zotero library_id and an API key from [Zotero web](https://www.zotero.org/settings/keys).
