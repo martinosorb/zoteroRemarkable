@@ -6,5 +6,7 @@ setup(
     author='',
     author_email='martopix@gmail.com',
     packages=['zoteroRemarkable'],
-    install_requires=['pyyaml', 'pyzotero']
+    install_requires=['pyyaml', 'pyzotero'],
+    package_data={'': ['config.ini']},
+    include_package_data=True,
 )

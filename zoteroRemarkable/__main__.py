@@ -6,7 +6,7 @@ from yaml import safe_load
 LIBRARY_TYPE = 'user'
 
 # user config variables. set these in a .env
-config = safe_load(open("config.ini"))
+config = safe_load(open(os.path.join("..", "config.ini")))
 API_KEY = config['API_KEY']
 LIBRARY_ID = config['LIBRARY_ID']
 COLLECTION_NAME = config['COLLECTION_NAME']  # in Zotero
