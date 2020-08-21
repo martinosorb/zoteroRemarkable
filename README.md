@@ -1,20 +1,11 @@
 # Zotero Remarkable Sync
 
-This is a little utility that I made to keep a collection/folder in sync with Zotero and Remarkable.
-My zotero setup uses external storage (I store all attachments on OneDrive)
+This is a little utility that made by [Oscar Morrison](https://github.com/oscarmorrison/zoteroRemarkable) to keep a collection/folder in sync with Zotero and Remarkable. This fork makes it more Pythonic, easier to install, and works for me (while the initial version did not work with my Zotero version).
 
 ## Setup
- - install rmapi
- - Download the [sync.py](https://raw.githubusercontent.com/oscarmorrison/zoteroRemarkableO/master/sync.py)
- - create a `.env` file
-
-### Dependancies
-- python3
-- [rmapi](https://github.com/juruen/rmapi)
-- pyzotero
-- pydash
-- dotenv
-(the above 3 python libraries can be installed using pip3)
+ - Install [rmapi](https://github.com/juruen/rmapi), the Go tool that interfaces with reMarkable
+ - Install this repo with `pip3 install git+https://github.com/martinosorb/zoteroRemarkable.git`
+ - Create a `config.ini` file modelled on the example in the `zoteroRemarkable` folder.
 
 ### Env file
 - Create a zotero api key
@@ -23,6 +14,6 @@ My zotero setup uses external storage (I store all attachments on OneDrive)
 - get base path for zotero pdf (papers)
 
 ### Usage
-_(ensure you have a .env file, with zotero api key, and rmapi setup)_  
-Then to sync, just run:  
-  `python3 sync.py`
+_(Ensure you have a config file, with zotero api key, and rmapi setup)_  
+Then to sync, at any time from any folder, just run:  
+  `python3 -m zoteroRemarkable`
