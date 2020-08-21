@@ -1,20 +1,20 @@
 from pyzotero import zotero as pyzotero
 import os
 import subprocess
-from dotenv import load_dotenv
-load_dotenv()
+from yaml import safe_load
 import logging
 
 LIBRARY_TYPE = 'user'
 
 # user config variables. set these in a .env
-API_KEY = os.getenv('API_KEY')
-LIBRARY_ID = os.getenv('LIBRARY_ID')
-COLLECTION_NAME = os.getenv('COLLECTION_NAME')  # in Zotero
-FOLDER_NAME = os.getenv('FOLDER_NAME')  # on the Remarkable device, this must exist!
-STORAGE_BASE_PATH = os.getenv('STORAGE_BASE_PATH')  # on local computer
+config = safe_load(open("config.ini"))
+API_KEY = config['API_KEY']
+LIBRARY_ID = config['LIBRARY_ID']
+COLLECTION_NAME = config['COLLECTION_NAME']  # in Zotero
+FOLDER_NAME = config['FOLDER_NAME']  # on the Remarkable device, this must exist!
+STORAGE_BASE_PATH = config['STORAGE_BASE_PATH']  # on local computer
+RMAPI = config['RMAPI']
 
-RMAPI = "~/Prog/go/bin/rmapi"
 RMAPI_LS = f"{RMAPI} ls /{FOLDER_NAME}"
 
 zotero = pyzotero.Zotero(LIBRARY_ID, LIBRARY_TYPE, API_KEY)
