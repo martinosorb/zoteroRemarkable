@@ -9,7 +9,7 @@ This is a little utility that made by [Oscar Morrison](https://github.com/oscarm
  - *After* you've created the `config.ini` file, install with pip:
  ```bash
  cd zoteroRemarkable
- pip install .
+ pip3 install .
  ```
 
 ### Config file
