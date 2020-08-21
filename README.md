@@ -4,8 +4,12 @@ This is a little utility that made by [Oscar Morrison](https://github.com/oscarm
 
 ## Setup
  - Install [rmapi](https://github.com/juruen/rmapi), the Go tool that interfaces with reMarkable
- - Install this repo with `pip3 install git+https://github.com/martinosorb/zoteroRemarkable.git`
- - Create a `config.ini` file modelled on the example in the `zoteroRemarkable` folder (or see below).
+ - Clone this repo with `git clone https://github.com/martinosorb/zoteroRemarkable.git`
+ - Create a `config.ini` file modelled on the example in the `zoteroRemarkable` folder (see below for details).
+ - *After* you've created the `config.ini` file, install with pip:
+ ```bash
+ cd zoteroRemarkable
+ pip install .```
 
 ### Config file
 - Get your Zotero library_id and an API key from [Zotero web](https://www.zotero.org/settings/keys).
